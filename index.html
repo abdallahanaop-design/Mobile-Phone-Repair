@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>التوكيل | عبدالله السعيد لصيانة المحمول</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cairo',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+direction:rtl;
+}
+
+.topbar{
+background:#00eaff;
+color:black;
+text-align:center;
+padding:10px;
+font-weight:bold;
+}
+
+nav{
+position:sticky;
+top:0;
+background:#020617;
+padding:15px;
+text-align:center;
+z-index:999;
+}
+
+nav a{
+color:white;
+margin:15px;
+text-decoration:none;
+font-size:18px;
+}
+
+header{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.8)),
+url("https://images.unsplash.com/photo-1511707171634-5f897ff02aa9");
+background-size:cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:55px;
+color:#00eaff;
+}
+
+.hero p{
+margin:20px;
+font-size:20px;
+}
+
+.btn{
+padding:15px 30px;
+background:#00eaff;
+color:black;
+border-radius:30px;
+text-decoration:none;
+font-size:18px;
+}
+
+section{
+padding:80px 10%;
+}
+
+.title{
+text-align:center;
+font-size:35px;
+margin-bottom:50px;
+color:#00eaff;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:15px;
+text-align:center;
+transition:0.4s;
+border:1px solid #00eaff30;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 0 20px #00eaff70;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:12px;
+}
+
+.tips{
+background:#1e293b;
+padding:40px;
+border-radius:15px;
+line-height:2;
+}
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.review{
+background:#1e293b;
+padding:20px;
+border-radius:12px;
+}
+
+.form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:12px;
+border:none;
+border-radius:8px;
+}
+
+button{
+padding:12px;
+background:#00eaff;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.contact{
+text-align:center;
+background:#020617;
+padding:60px;
+}
+
+.phone{
+font-size:30px;
+color:#00eaff;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+font-size:30px;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="topbar">
+مركز التوكيل لصيانة جميع الهواتف | 01090828974
+</div>
+
+<nav>
+<a href="#">الرئيسية</a>
+<a href="#services">الخدمات</a>
+<a href="#gallery">المعرض</a>
+<a href="#reviews">آراء العملاء</a>
+<a href="#contact">اتصل بنا</a>
+</nav>
+
+<header>
+
+<div class="hero">
+
+<h1>التوكيل</h1>
+
+<p>
+مركز عبدالله السعيد لصيانة وإكسسوارات المحمول  
+أفضل مركز متخصص في إصلاح جميع أعطال الهواتف
+</p>
+
+<a class="btn" href="#contact">احجز صيانة</a>
+
+</div>
+
+</header>
+
+<section id="services">
+
+<h2 class="title">خدمات الصيانة</h2>
+
+<div class="services">
+
+<div class="card" data-aos="zoom-in">
+<i class="fa-solid fa-mobile-screen-button" style="font-size:40px;color:#00eaff"></i>
+<h3>تصليح الشاشات</h3>
+<p>تغيير جميع أنواع الشاشات.</p>
+</div>
+
+<div class="card" data-aos="zoom-in">
+<i class="fa-solid fa-microchip" style="font-size:40px;color:#00eaff"></i>
+<h3>إصلاح البوردة</h3>
+<p>حل مشاكل اللوحة الأم.</p>
+</div>
+
+<div class="card" data-aos="zoom-in">
+<i class="fa-solid fa-battery-full" style="font-size:40px;color:#00eaff"></i>
+<h3>تغيير البطارية</h3>
+<p>تركيب بطاريات أصلية.</p>
+</div>
+
+<div class="card" data-aos="zoom-in">
+<i class="fa-solid fa-headphones" style="font-size:40px;color:#00eaff"></i>
+<h3>إكسسوارات</h3>
+<p>جرابات وشواحن وسماعات.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="title">معرض الصيانة</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+<img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">
+<img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">نصائح لحماية الهاتف</h2>
+
+<div class="tips">
+
+<p>✔ استخدم جراب حماية قوي</p>
+<p>✔ لا تستخدم شواحن غير أصلية</p>
+<p>✔ لا تثبت تطبيقات غير موثوقة</p>
+<p>✔ قم بتحديث الهاتف باستمرار</p>
+<p>✔ لا تضغط على روابط مجهولة</p>
+
+</div>
+
+</section>
+
+<section id="reviews">
+
+<h2 class="title">آراء العملاء</h2>
+
+<div class="reviews">
+
+<div class="review">
+⭐⭐⭐⭐⭐  
+خدمة ممتازة وسريعة
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐  
+أفضل مركز صيانة تعاملت معه
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐  
+أسعار ممتازة وجودة عالية
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">احجز صيانة</h2>
+
+<div class="form">
+
+<input placeholder="اسمك">
+<input placeholder="رقم الهاتف">
+<textarea placeholder="وصف العطل"></textarea>
+<button>إرسال الطلب</button>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">موقع المركز</h2>
+
+<iframe
+width="100%"
+height="400"
+style="border:0"
+loading="lazy"
+allowfullscreen
+src="https://www.google.com/maps?q=Egypt&output=embed">
+</iframe>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>تواصل معنا</h2>
+
+<div class="phone">01090828974</div>
+
+<p>عبدالله السعيد</p>
+
+</section>
+
+<footer>
+
+<p>© مركز التوكيل لصيانة المحمول</p>
+
+</footer>
+
+<a href="https://wa.me/201090828974" class="whatsapp-float">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
+
+</body>
+</html>
