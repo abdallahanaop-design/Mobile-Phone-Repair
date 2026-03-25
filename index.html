@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مكتب المحاماة Ultra Premium</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* ====== إعدادات أساسية ====== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Cairo',sans-serif;}
+body{background:#111;color:#fff;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+
+/* ====== Animated Gradient Background ====== */
+body::before{
+  content:"";
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  background:linear-gradient(-45deg,#111,#222,#333,#444);
+  background-size:400% 400%;
+  z-index:-1;
+  animation:gradientBG 15s ease infinite;
+}
+@keyframes gradientBG{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* ====== الهيدر ====== */
+header{position:fixed;width:100%;top:0;left:0;padding:20px 50px;display:flex;justify-content:space-between;align-items:center;z-index:1000;transition:0.3s;}
+header.scrolled{background:rgba(0,0,0,0.85);}
+header .logo{font-size:28px;font-weight:700;color:#ffd700;}
+header nav a{margin-left:30px;font-weight:600;transition:0.3s;}
+header nav a:hover{color:#ffd700;}
+
+/* ====== Hero Section 3D Mouse Parallax ====== */
+.hero{height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;position:relative;perspective:1000px;overflow:hidden;}
+.hero-content{position:relative;z-index:2;transform-style:preserve-3d;transition:transform 0.2s;}
+.hero h1{font-size:50px;margin-bottom:20px;color:#ffd700;text-shadow:0 0 20px rgba(255,215,0,0.5);}
+.hero p{font-size:20px;margin-bottom:30px;}
+.hero .btn{padding:15px 35px;border-radius:50px;font-weight:700;color:#111;background:#ffd700;box-shadow:0 0 20px rgba(255,215,0,0.8);transition:0.4s;}
+.hero .btn:hover{transform:scale(1.1);box-shadow:0 0 40px rgba(255,215,0,1);}
+
+/* ====== Sections ====== */
+section{padding:100px 50px;opacity:0;transform:translateY(50px);transition:all 1s ease;}
+section.active{opacity:1;transform:translateY(0);}
+h2{font-size:32px;margin-bottom:30px;position:relative;color:#ffd700;}
+h2::after{content:"";position:absolute;width:60px;height:4px;background:#ffd700;bottom:-10px;left:0;}
+
+/* ====== Services Cards 3D ====== */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;}
+.service-card{background:#222;padding:30px;border-radius:20px;text-align:center;transition:transform 0.5s,box-shadow 0.5s;transform-style:preserve-3d;cursor:pointer;}
+.service-card:hover{transform:rotateY(15deg) scale(1.05);box-shadow:0 15px 35px rgba(255,215,0,0.5);}
+.service-card h3{margin-bottom:15px;font-size:22px;color:#ffd700;}
+
+/* ====== Team Cards with Popup ====== */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px;}
+.team-member{background:#222;border-radius:20px;overflow:hidden;box-shadow:0 10px 25px rgba(255,215,0,0.3);cursor:pointer;transition:0.5s;position:relative;}
+.team-member img{width:100%;transition:transform 0.5s;}
+.team-member:hover img{transform:scale(1.1);}
+.team-member h4{margin:15px 0 5px;font-size:20px;color:#ffd700;}
+.team-member p{color:#ccc;font-size:16px;}
+
+/* ====== Modal ====== */
+.modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);display:flex;justify-content:center;align-items:center;opacity:0;visibility:hidden;transition:0.5s;z-index:2000;}
+.modal.active{opacity:1;visibility:visible;}
+.modal-content{background:#222;padding:40px;border-radius:20px;max-width:500px;text-align:center;position:relative;}
+.modal-content h3{color:#ffd700;margin-bottom:10px;}
+.modal-content p{color:#fff;margin-bottom:20px;}
+.modal-content button{padding:10px 25px;border:none;border-radius:50px;background:#ffd700;color:#111;font-weight:700;cursor:pointer;transition:0.3s;}
+.modal-content button:hover{background:#e6c200;box-shadow:0 0 20px rgba(255,215,0,0.8);}
+
+/* ====== Contact Form ====== */
+.contact form{display:grid;gap:20px;}
+.contact input,.contact textarea{padding:15px;border-radius:10px;border:none;font-size:16px;}
+.contact button{padding:15px;border-radius:50px;font-weight:700;background:#ffd700;color:#111;box-shadow:0 0 20px rgba(255,215,0,0.8);cursor:pointer;transition:0.4s;}
+.contact button:hover{transform:scale(1.05);box-shadow:0 0 40px rgba(255,215,0,1);}
+
+/* ====== Footer ====== */
+footer{background:#111;color:#fff;text-align:center;padding:30px 50px;}
+
+/* ====== Animations ====== */
+@keyframes fadeInZoom{0%{opacity:0;transform:scale(0.5);}100%{opacity:1;transform:scale(1);}}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <div class="logo">مكتب المحاماة</div>
+  <nav>
+    <a href="#about">عن المكتب</a>
+    <a href="#services">خدماتنا</a>
+    <a href="#team">فريق العمل</a>
+    <a href="#contact">اتصل بنا</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content" id="hero-content">
+    <h1>مكتب محاماة فاخر ومتقدم</h1>
+    <p>خبرة عالية، نتائج مضمونة، اهتمام كامل بكل قضية.</p>
+    <a href="#contact" class="btn">تواصل معنا الآن</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>عن المكتب</h2>
+  <p>مكتبنا يوفر أفضل الخدمات القانونية بمستوى احترافي عالي، مع فريق محامين متخصصين في مختلف القضايا.</p>
+</section>
+
+<section id="services">
+  <h2>خدماتنا</h2>
+  <div class="services-grid">
+    <div class="service-card"><h3>قضايا مدنية</h3><p>تمثيل كامل أمام المحاكم المدنية مع استشارات دقيقة.</p></div>
+    <div class="service-card"><h3>قضايا جنائية</h3><p>الدفاع عن حقوقكم وضمان العدالة القانونية.</p></div>
+    <div class="service-card"><h3>استشارات تجارية</h3><p>حلول قانونية للشركات والمؤسسات بكفاءة عالية.</p></div>
+    <div class="service-card"><h3>تحكيم وتسوية نزاعات</h3><p>حل النزاعات بطريقة ودية وبأعلى درجات المهنية.</p></div>
+  </div>
+</section>
+
+<section id="team">
+  <h2>فريق العمل</h2>
+  <div class="team-grid">
+    <div class="team-member" data-name="أحمد علي" data-role="محامي جنائي" data-info="أحمد علي خبير في القضايا الجنائية ويوفر استشارات قانونية دقيقة."><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="محامي"></div>
+    <div class="team-member" data-name="ليلى محمد" data-role="محامية مدنية" data-info="ليلى محمد متخصصة في القضايا المدنية وتمتلك خبرة واسعة."><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="محامية"></div>
+    <div class="team-member" data-name="سعيد حسن" data-role="استشارات تجارية" data-info="سعيد حسن يقدم حلول قانونية للشركات والمؤسسات بكفاءة عالية."><img src="https://randomuser.me/api/portraits/men/65.jpg" alt="محامي"></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>اتصل بنا</h2>
+  <form>
+    <input type="text" placeholder="الاسم الكامل" required>
+    <input type="email" placeholder="البريد الإلكتروني" required>
+    <textarea placeholder="رسالتك" rows="6" required></textarea>
+    <button type="submit">إرسال</button>
+  </form>
+</section>
+
+<footer>
+  جميع الحقوق محفوظة © 2026 مكتب المحاماة
+</footer>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h3 id="modal-name"></h3>
+    <p id="modal-role"></p>
+    <p id="modal-info"></p>
+    <button id="modal-close">إغلاق</button>
+  </div>
+</div>
+
+<script>
+// ====== Hero 3D Parallax ======
+const hero = document.getElementById('hero-content');
+document.addEventListener('mousemove', e => {
+  let x = (window.innerWidth/2 - e.pageX)/50;
+  let y = (window.innerHeight/2 - e.pageY)/50;
+  hero.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+});
+
+// ====== Scroll Reveal ======
+const sections = document.querySelectorAll('section');
+const revealOnScroll = () => {
+    const scrollY = window.scrollY + window.innerHeight - 150;
+    sections.forEach(sec => {
+        if(scrollY > sec.offsetTop){sec.classList.add('active');}
+    });
+};
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+// ====== Header Scroll ======
+const header = document.getElementById('header');
+window.addEventListener('scroll', ()=>{header.classList.toggle('scrolled', window.scrollY>50);});
+
+// ====== Team Modal ======
+const modal = document.getElementById('modal');
+const modalName = document.getElementById('modal-name');
+const modalRole = document.getElementById('modal-role');
+const modalInfo = document.getElementById('modal-info');
+const modalClose = document.getElementById('modal-close');
+document.querySelectorAll('.team-member').forEach(member=>{
+  member.addEventListener('click', ()=>{
+    modal.classList.add('active');
+    modalName.textContent = member.dataset.name;
+    modalRole.textContent = member.dataset.role;
+    modalInfo.textContent = member.dataset.info;
+  });
+});
+modalClose.addEventListener('click', ()=>{modal.classList.remove('active');});
+modal.addEventListener('click', e=>{if(e.target==modal) modal.classList.remove('active');});
+</script>
+
+</body>
+</html>
